@@ -12,7 +12,7 @@
 
 <script type="text/ecmascript-6">
   import BScroll from 'better-scroll'
-  import addClass from 'common/js/dom.js'
+  import {addClass} from 'common/js/dom.js'
   export default {
     data() {
       return {

@@ -1,9 +1,9 @@
-const hasClass = (el, className) => {
+export const hasClass = (el, className) => {
   let reg = new RegExp('(^|\\s)' + className + '(\\s|$)')
   return reg.test(el.className)
 }
 
-const addClass = (el, className) => {
+export const addClass = (el, className) => {
   if (hasClass(el, className)) {
     return
   }
@@ -11,4 +11,11 @@ const addClass = (el, className) => {
   newClass.push(className)
   el.className = newClass.join(' ')
 }
-export default addClass
+export const getData = (el, name, val) => {
+  name = 'data-' + name
+  if (val) {
+    return el.setAttribute(name, val)
+  } else {
+    return el.getAttribute(name)
+  }
+}
